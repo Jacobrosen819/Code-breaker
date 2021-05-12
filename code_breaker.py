@@ -39,6 +39,8 @@ class Code_breaker:
             Code_breaker.affine (text_to_decode)
         elif what_cipher == "atbash":
             Code_breaker.atbash (text_to_decode)
+        elif what_cipher == "baconian":
+            Code_breaker.baconian (text_to_decode)
         elif what_cipher == "ceaser":
             Code_breaker.ceaser (text_to_decode)
         elif what_cipher == "ceaser keyed" or what_cipher == "ck" or what_cipher == "ceaser key":
@@ -76,9 +78,9 @@ class Code_breaker:
     def baconian(text_to_decode):
         lookup_table = {'aaaaa' : 'a', 'aaaab' : 'b', 'aaaba' : 'c', 'aaabb' : 'd', 'aabaa' : 'e',
         'aabab' : 'f', 'aabba' : 'g', 'aabbb' : 'h', 'abaaa' : 'i', 'abaaa' : 'j',
-        'abaab' : 'k', 'ababa' : 'l', 'ababb' : 'm', 'n' : 'm', 'o' : 'l',
-        'p' : 'k', 'q' : 'j', 'r' : 'i', 's' : 'h', 't' : 'g',
-        'u' : 'f', 'v' : 'e', 'w' : 'd', 'x' : 'c', 'y' : 'b', 'z' : 'a'}
+        'abaab' : 'k', 'ababa' : 'l', 'ababb' : 'm', 'abbaa' : 'n', 'abbab' : 'o',
+        'abbba' : 'p', 'abbbb' : 'q', 'baaaa' : 'r', 'baaab' : 's', 'baaba' : 't',
+        'baabb' : 'u', 'baabb' : 'u', 'babaa' : 'w', 'babab' : 'x', 'babba' : 'y', 'babbb' : 'z'}
         cipher = ''
         for letter in text_to_decode:
             if(letter != ' '):
