@@ -33,6 +33,7 @@ class Code_breaker:
         self.all_codes = all_codes #
     def text_input():
         text_to_decode = input ("What is your text to decode? ")
+        text_to_decode = text_to_decode.lower()
         what_cipher = input ("What type of cipher do you think it is? ")
         if what_cipher == "affine":
             Code_breaker.affine (text_to_decode)
