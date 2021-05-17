@@ -77,35 +77,7 @@ class Code_breaker:
         return Code_breaker.text_input()
     def baconian(text_to_decode):
         lookup_table = {'a':'aaaaa', 'b':'aaaab', 'c':'aaaba', 'd':'aaabb', 'e':'aabaa', 'f':'aabab', 'g':'aabba', 'h':'aabbb', 'i':'abaaa', 'j':'abaab', 'k':'ababa', 'l':'ababb', 'm':'abbaa', 'n':'abbab', 'o':'abbba', 'p':'abbbb', 'q':'baaaa', 'r':'baaab', 's':'baaba', 't':'baabb', 'u':'babaa', 'v':'babab', 'w':'babba', 'x':'babbb', 'y':'bbaaa', 'z':'bbaab'}
-        decipher = ''
-        i = 0
-    
-        # emulating a do-while loop
-        while True :
-            # condition to run decryption till 
-            # the last set of ciphertext
-            if(i < len(text_to_decode)-4):
-                # extracting a set of ciphertext
-                # from the message
-                substr = text_to_decode[i:i + 5]
-                # checking for space as the first 
-                # character of the substring
-                if(substr[0] != ' '):
-                    '''
-                    This statement gets us the key(plaintext) using the values(ciphertext)
-                    Just the reverse of what we were doing in encrypt function
-                    '''
-                    decipher += list(lookup_table.keys())[list(lookup_table.values()).index(substr)]
-                    i += 5 # to get the next set of ciphertext
-    
-                else:
-                    # adds space
-                    decipher += ' '
-                    i += 1 # index next to the space
-            else:
-                break 
-        print(decipher)
-        """
+        
         cipher = ''
         for letter in text_to_decode:
             if(letter != ' '):
@@ -113,7 +85,7 @@ class Code_breaker:
             else:
                 cipher += ' '
         print(cipher)
-        """
+        
         return Code_breaker.text_input()
     def ceaser(text_to_decode):
         header = "SHIFT         SOLVE"
