@@ -76,15 +76,11 @@ class Code_breaker:
         print(cipher)
         return Code_breaker.text_input()
     def baconian(text_to_decode):
-        lookup_table = {'aaaaa' : 'a', 'aaaab' : 'b', 'aaaba' : 'c', 'aaabb' : 'd', 'aabaa' : 'e',
-        'aabab' : 'f', 'aabba' : 'g', 'aabbb' : 'h', 'abaaa' : 'i', 'abaaa' : 'j',
-        'abaab' : 'k', 'ababa' : 'l', 'ababb' : 'm', 'abbaa' : 'n', 'abbab' : 'o',
-        'abbba' : 'p', 'abbbb' : 'q', 'baaaa' : 'r', 'baaab' : 's', 'baaba' : 't',
-        'baabb' : 'u', 'baabb' : 'u', 'babaa' : 'w', 'babab' : 'x', 'babba' : 'y', 'babbb' : 'z'}
+        lookup_table = {'a':'aaaaa', 'b':'aaaab', 'c':'aaaba', 'd':'aaabb', 'e':'aabaa', 'f':'aabab', 'g':'aabba', 'h':'aabbb', 'i':'abaaa', 'j':'abaab', 'k':'ababa', 'l':'ababb', 'm':'abbaa', 'n':'abbab', 'o':'abbba', 'p':'abbbb', 'q':'baaaa', 'r':'baaab', 's':'baaba', 't':'baabb', 'u':'babaa', 'v':'babab', 'w':'babba', 'x':'babbb', 'y':'bbaaa', 'z':'bbaab'}
         cipher = ''
         for letter in text_to_decode:
             if(letter != ' '):
-                cipher += lookup_table[letter]
+                cipher += " " + lookup_table[letter]
             else:
                 cipher += ' '
         print(cipher)
